@@ -1,0 +1,251 @@
+/* Reset default margins */
+body, h1, h2, h3, h4, h5, h6, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f8f9fa;
+    color: #333;
+    padding-top: 0px; /* Adjust based on header height */
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Home Section Styles */
+#home {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: relative;
+    background-image: url('gambar/cover.jpeg'); /* Ganti dengan path gambar Anda */
+    background-size: cover;
+    background-position: center;
+    height: 100vh; /* Set tinggi sesuai kebutuhan */
+    color: #ffffff; /* Warna teks untuk kontras */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+}
+
+#home .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Overlay gelap untuk kejelasan teks */
+    z-index: 0;
+}
+
+#home .container {
+    position: relative;
+    z-index: 1; /* Pastikan konten ada di atas latar belakang */
+}
+
+/* Stylize the text */
+#home h1 {
+    font-size: 3em; /* Sesuaikan ukuran teks */
+}
+
+#home p {
+    font-size: 1.5em; /* Sesuaikan ukuran teks */
+    margin-top: 20px; /* Spasi atas */
+}
+
+/* Additional styles for fixed navbar */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+@media (max-width: 768px) {
+    body {
+        padding-top: 60px; /* Adjust for mobile devices */
+    }
+}
+
+/* Navbar Styles */
+.navbar-nav {
+    transition: background-color 0.5s ease;
+}
+.navbar-brand {
+    font-family: 'Brush Script MT', cursive;
+    font-size: 30px; /* Anda dapat menyesuaikan ukuran font sesuai kebutuhan */
+    transition: transform 0.5s ease;
+}
+.navbar-nav:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+.nav-item {
+    transition: transform 0.5s ease;
+}
+.nav-item:hover {
+    transform: scale(1.1);
+}
+.nav-item .nav-link.active {
+    font-weight: bold;
+    color: #000000 !important;
+}
+
+header nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    list-style-type: none;
+}
+
+header nav ul li {
+    margin-right: 20px;
+}
+
+header nav ul li a {
+    color: #333;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #4e6b8a;
+}
+
+
+/* Products Section */
+#products ul {
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#products ul li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 280px;
+}
+
+#products ul li img {
+    margin-bottom: 0px;
+    border-radius: 1px;
+    max-width: 60%;
+}
+
+/* Section Styles */
+section {
+    padding: 40px 0;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+section h3 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+section p {
+    font-size: 1.1em;
+    line-height: 1.8;
+}
+
+section ul {
+    margin-bottom: 20px;
+}
+
+.section-box {
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 2px solid #000000;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 10px 20px 30px rgba(0,0,0,0.1);
+}
+
+/* Footer Styles */
+footer {
+    background-color: #000000;
+    color: #fff;
+    text-align: center;
+    padding: 60px 0;
+    margin-top: 60px;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Media Sosial Icons */
+#contact a {
+    color: #5e5e5e;
+    text-decoration: none;
+    margin-right: 10px;
+    font-size: 1.5em;
+    transition: color 0.3s ease;
+}
+
+#contact a:hover {
+    color: #007bff;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;
+        height: auto;
+    }
+
+    header nav ul li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    section {
+        padding: 20px 0;
+    }
+
+    #home h1 {
+        font-size: 2em;
+    }
+
+    #home p {
+        font-size: 1em;
+    }
+
+    .section-box {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    #products .col-md-6 {
+        flex: 0 0 10%;
+        max-width: 10%;
+    }
+}
+
+@media (max-width: 992px) {
+    #products .col-lg-4 {
+        flex: 0 0 0%;
+        max-width: 50%;
+    }
+}
